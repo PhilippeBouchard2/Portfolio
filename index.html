@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio professionnel – Philippe Bouchard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F7FA;--ink:#1B2A41;--blue:#2F5D8A;--line:#D5DCE6;--card:#fff;--hl:#FFF3C4;--hlb:#E0A100}
+@media (prefers-color-scheme:dark){:root{--bg:#121A26;--ink:#E8EDF3;--blue:#8FB5DE;--line:#2B394D;--card:#1A2433;--hl:#3A3214;--hlb:#E0A100}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;line-height:1.2;margin:0 0 .5em}
+h1{font-size:clamp(2.2rem,6vw,3.6rem)}
+h2{font-size:clamp(1.7rem,4vw,2.3rem)}
+h3{font-size:1.25rem}
+a{color:var(--blue)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--hlb);outline-offset:2px}
+nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;padding:.8rem 1.25rem;align-items:center}
+nav strong{font-family:"Source Serif 4",serif;margin-right:auto}
+nav a{text-decoration:none;color:var(--ink);font-weight:500}
+nav a:hover{color:var(--blue);text-decoration:underline}
+main{max-width:1000px;margin:0 auto;padding:0 1.25rem}
+section{padding:4rem 0 2rem;border-bottom:1px solid var(--line)}
+.hero{display:grid;grid-template-columns:1fr 260px;gap:2.5rem;align-items:center;padding-top:3rem}
+.hero p.lead{font-size:1.2rem;max-width:60ch}
+.photo{aspect-ratio:4/5;width:100%;object-fit:cover;border-radius:6px;background:var(--line);display:grid;place-items:center;text-align:center;color:var(--ink);font-size:.9rem;padding:1rem}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.two{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+@media(max-width:760px){.hero,.three,.two{grid-template-columns:1fr}.photo{max-width:260px}}
+.box{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1.25rem}
+.box h3{margin-bottom:.4rem}
+.box.core{border:2px solid var(--blue)}
+.box ul{margin:.3rem 0 0;padding-left:1.2rem}
+.sub{color:var(--blue);font-size:.95rem;margin:0 0 .6rem}
+.todo{background:var(--hl);border-bottom:2px dashed var(--hlb);padding:0 .2em}
+.note{font-size:.9rem;opacity:.8}
+.comp{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:6px;padding:1.5rem;margin:1.5rem 0}
+.comp h4{margin:1.1rem 0 .2rem;font-size:1rem;color:var(--blue)}
+.comp p{margin:0 0 .5rem}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin-top:1rem}
+.gallery figure{margin:0}
+.gallery .photo{aspect-ratio:4/3}
+figcaption{font-size:.9rem;margin-top:.3rem}
+.table-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:560px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:.7rem;text-align:left;vertical-align:top}
+th{background:var(--bg)}
+footer{max-width:1000px;margin:0 auto;padding:2rem 1.25rem 3rem;font-size:.9rem}
+</style>
+</head>
+<body>
+
+<!--
+  MODE D'EMPLOI
+  1. Tout ce qui est surligné en jaune (class="todo") est à remplacer par ton contenu.
+  2. Quand tu as remplacé un texte, supprime class="todo" de la balise pour retirer le surlignage.
+  3. Tes images vont dans le dossier "images". Remplace les <div class="photo"> par :
+     <img class="photo" src="images/nom-du-fichier.jpg" alt="Description de l'image">
+-->
+
+<nav aria-label="Navigation principale">
+  <strong>Philippe Bouchard</strong>
+  <a href="#identite">Identité</a>
+  <a href="#techniques">Compétences techniques</a>
+  <a href="#transversales">Compétences transversales</a>
+  <a href="#plan">Plan de développement</a>
+</nav>
+
+<main>
+
+<!-- ============ IDENTITÉ PROFESSIONNELLE ============ -->
+<section id="identite" class="hero-section">
+  <div class="hero">
+    <div>
+      <h1>Philippe Bouchard</h1>
+      <p class="sub">Étudiant en génie du bâtiment – Université de Sherbrooke</p>
+      <p class="lead">J'aime comprendre comment fonctionnent les systèmes et trouver comment les rendre plus efficaces. Ce qui m'attire dans le génie, c'est autant l'analyse technique que le contact avec les gens : écouter un client, comprendre son besoin et le traduire en solution concrète. Je me dirige vers la gestion de l'ingénierie, où je pourrai coordonner des équipes et des projets tout en gardant un pied dans la technique.</p>
+    </div>
+    <div class="photo todo">Ta photo<br>(images/portrait.jpg)</div>
+  </div>
+
+  <h2 style="margin-top:3rem">Mon identité professionnelle actuelle</h2>
+  <p class="note">Inspiré de la figure 1 du plan de cours : trois sources d'identité, puis ce qui se trouve à leur croisement.</p>
+
+  <div class="three">
+    <div class="box">
+      <h3>Moi comme personne</h3>
+      <p class="sub">Valeurs, forces, motivations, intérêts, croyances, expériences de vie</p>
+      <p>Je suis curieux et j'aime optimiser : quand quelque chose peut être fait plus simplement, je cherche comment. Je suis autodidacte, ce qui m'a amené à maîtriser Excel avancé, Python, AutoCAD et Revit selon les besoins des projets. Ma gestion du temps et ma créativité m'ont servi autant dans mes études que dans mes implications : coordonnateur aux affaires externes de l'association étudiante du cégep, guitariste pendant dix ans et technicien de son lors de spectacles.</p>
+    </div>
+    <div class="box">
+      <h3>La profession d'ingénieur</h3>
+      <p class="sub">Rôle dans la société, responsabilités, déontologie, compétences attendues</p>
+      <p>Pour moi, l'ingénieur conçoit et fait fonctionner des ouvrages que la société utilise tous les jours, comme des écoles, des routes et des bâtiments. Il est responsable de leur sécurité et de leur qualité, et il doit respecter le Code de déontologie. Il doit aussi savoir communiquer avec des interlocuteurs très différents : clients, entrepreneurs, techniciens et autres ingénieurs.</p>
+    </div>
+    <div class="box">
+      <h3>Mes expériences</h3>
+      <p class="sub">Cours, projets, stages, implication étudiante, mentors, échecs et succès</p>
+      <ul>
+        <li>Stage en mécanique du bâtiment, Centre de service scolaire de la Capitale (automne 2025)</li>
+        <li>Assistant chargé de projet, Gobeil Dion &amp; Associés (hiver 2025)</li>
+        <li>Assistant chargé de projet, Acier Orford (été 2024)</li>
+        <li>Technicien en contrôle des matériaux, Services Exp (automne 2023)</li>
+        <li>Canoë de béton : équipe gagnante en 2023, co-capitaine en 2024</li>
+        <li>Compétition québécoise d'ingénierie, génie-conseil (2025)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="three" style="margin-top:1rem">
+    <div class="box">
+      <h3>Moi + profession</h3>
+      <p class="sub">Ce qui relie mes valeurs, mes forces et le rôle d'ingénieur que je vise</p>
+      <p>Mon goût pour l'optimisation et mon aisance avec les gens se rejoignent dans la gestion de l'ingénierie. Je vise un rôle où je comprends les systèmes d'un bâtiment, où je suis le lien entre le client et les intervenants techniques, et où je fais avancer les projets de façon efficace.</p>
+    </div>
+    <div class="box">
+      <h3>Moi + expériences</h3>
+      <p class="sub">Ce que mes expériences m'ont appris sur moi et ont fait évoluer</p>
+      <p>Mes stages m'ont montré que j'aime coordonner : animer des réunions et communiquer avec les sous-traitants chez Gobeil Dion m'a plu autant que la conception. Chez Acier Orford, j'ai développé des outils Excel pour l'entreprise et j'ai vu que l'optimisation me suit partout. Comme co-capitaine du canoë de béton, j'ai appris à diriger une équipe.</p>
+    </div>
+    <div class="box">
+      <h3>Profession + expériences</h3>
+      <p class="sub">Ce que mes expériences m'ont appris sur la profession d'ingénieur</p>
+      <p>Du laboratoire de contrôle des matériaux au chantier, puis à la conception de rénovation de ventilation, j'ai vu les différentes étapes d'un projet. J'ai compris que l'ingénierie est un travail de coordination entre plusieurs intervenants, et que la lecture de plans et l'inspection sur le terrain sont indispensables à de bonnes décisions.</p>
+    </div>
+  </div>
+
+  <div class="box core" style="margin-top:1rem">
+    <h3>Mon identité professionnelle en quelques mots</h3>
+    <ul>
+      <li>Analytique : je cherche à comprendre un système avant d'agir</li>
+      <li>Optimisateur : je repère ce qui peut être amélioré</li>
+      <li>Orienté client et équipe : je fais le lien entre les gens et la technique</li>
+    </ul>
+  </div>
+
+  <h2 style="margin-top:3rem">Objectifs de carrière à court terme (1 à 2 ans)</h2>
+  <div class="two">
+    <div class="box"><h3>Objectif 1</h3><p class="todo">Proposition à valider : occuper un poste d'ingénieur junior en mécanique du bâtiment ou en gestion de projet dans un bureau d'ingénieurs-conseils, avec des contacts directs avec les clients.</p></div>
+    <div class="box"><h3>Objectif 2</h3><p class="todo">Proposition à valider : m'inscrire à l'OIQ comme membre junior et documenter mon expérience selon le référentiel de compétences, avec l'aide d'un mentor.</p></div>
+  </div>
+
+  <h2 style="margin-top:3rem">Preuves et artéfacts</h2>
+  <p class="note">Remplace chaque bloc « Ta photo » par une image réelle. Copie un bloc &lt;figure&gt; pour en ajouter.</p>
+  <div class="gallery">
+    <figure><div class="photo todo">Ta photo : canoë de béton</div><figcaption>Canoë de béton de l'Université de Sherbrooke, équipe gagnante 2023 et co-capitaine 2024.</figcaption></figure>
+    <figure><div class="photo todo">Ta photo : CQI 2025</div><figcaption>Compétition québécoise d'ingénierie, catégorie génie-conseil, 2025.</figcaption></figure>
+    <figure><div class="photo todo">Ta photo : stage ou chantier</div><figcaption>Stage en mécanique du bâtiment, automne 2025.</figcaption></figure>
+  </div>
+</section>
+
+
+<!-- ============ COMPÉTENCES TECHNIQUES ============ -->
+<section id="techniques">
+  <h2>Compétences techniques</h2>
+  <p>Deux compétences du référentiel de l'OIQ (1.1 à 1.10). Chaque description fait entre 150 et 250 mots et suit le format : mise en contexte, actions, résultats. Utilise le « je ».</p>
+
+  <article class="comp">
+    <h3><span class="todo">1.X – Nom de la compétence technique choisie</span></h3>
+    <h4>Mise en contexte</h4>
+    <p class="todo">Situation ou problème précis à résoudre : où, quand, quel projet ou stage.</p>
+    <h4>Actions</h4>
+    <p class="todo">Ce que tu as fait, concrètement : démarches, jugements techniques, solutions trouvées. Exemples précis, en liste si possible. C'est la partie la plus importante.</p>
+    <h4>Résultats</h4>
+    <p class="todo">Les impacts de tes actions, des solutions proposées ou de tes jugements.</p>
+    <h4>Preuves</h4>
+    <ul><li><a href="#" class="todo">Lien vers un rapport, un relevé de notes, une évaluation de stage…</a></li></ul>
+  </article>
+
+  <article class="comp">
+    <h3><span class="todo">1.X – Nom de la compétence technique choisie</span></h3>
+    <h4>Mise en contexte</h4>
+    <p class="todo">Situation ou problème précis à résoudre.</p>
+    <h4>Actions</h4>
+    <p class="todo">Ce que tu as fait, concrètement.</p>
+    <h4>Résultats</h4>
+    <p class="todo">Les impacts de tes actions.</p>
+    <h4>Preuves</h4>
+    <ul><li><a href="#" class="todo">Lien vers une preuve</a></li></ul>
+  </article>
+</section>
+
+<!-- ============ COMPÉTENCES TRANSVERSALES ============ -->
+<section id="transversales">
+  <h2>Compétences transversales</h2>
+  <p>Deux compétences du référentiel de l'OIQ (2.1 à 5.4), même format que les compétences techniques.</p>
+
+  <article class="comp">
+    <h3><span class="todo">X.X – Nom de la compétence transversale choisie</span></h3>
+    <h4>Mise en contexte</h4>
+    <p class="todo">Situation ou problème précis.</p>
+    <h4>Actions</h4>
+    <p class="todo">Ce que tu as fait, concrètement.</p>
+    <h4>Résultats</h4>
+    <p class="todo">Les impacts de tes actions.</p>
+    <h4>Preuves</h4>
+    <ul><li><a href="#" class="todo">Lien vers une preuve</a></li></ul>
+  </article>
+
+  <article class="comp">
+    <h3><span class="todo">X.X – Nom de la compétence transversale choisie</span></h3>
+    <h4>Mise en contexte</h4>
+    <p class="todo">Situation ou problème précis.</p>
+    <h4>Actions</h4>
+    <p class="todo">Ce que tu as fait, concrètement.</p>
+    <h4>Résultats</h4>
+    <p class="todo">Les impacts de tes actions.</p>
+    <h4>Preuves</h4>
+    <ul><li><a href="#" class="todo">Lien vers une preuve</a></li></ul>
+  </article>
+</section>
+
+<!-- ============ PLAN DE DÉVELOPPEMENT ============ -->
+<section id="plan" style="border-bottom:0">
+  <h2>Plan de développement professionnel (2 à 4 ans)</h2>
+  <p>Compétence 6.3 de l'OIQ. Ce plan doit être cohérent avec les besoins de formation de ton annexe autocritique.</p>
+
+  <div class="two">
+    <div class="box">
+      <h3>Indicateur 1 : combler mes lacunes</h3>
+      <p class="sub">Continuer ma formation là où des lacunes sont reconnues</p>
+      <p class="todo">Quelles lacunes as-tu identifiées et comment comptes-tu les combler ?</p>
+    </div>
+    <div class="box">
+      <h3>Indicateur 2 : me tenir à jour</h3>
+      <p class="sub">Activités planifiées d'autoformation et de développement professionnel</p>
+      <p class="todo">Quelles activités prévois-tu pour rester à jour dans ton champ de pratique ?</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:2rem">Échéancier</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Période</th><th>Besoin de formation</th><th>Activité ou moyen</th><th>Indicateur visé</th></tr></thead>
+      <tbody>
+        <tr><td class="todo">Année 1</td><td class="todo">…</td><td class="todo">…</td><td class="todo">1 ou 2</td></tr>
+        <tr><td class="todo">Année 2</td><td class="todo">…</td><td class="todo">…</td><td class="todo">1 ou 2</td></tr>
+        <tr><td class="todo">Année 3</td><td class="todo">…</td><td class="todo">…</td><td class="todo">1 ou 2</td></tr>
+        <tr><td class="todo">Année 4</td><td class="todo">…</td><td class="todo">…</td><td class="todo">1 ou 2</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Portfolio GCI607 – Philippe Bouchard – Automne 2026 – <a href="mailto:ton.courriel@usherbrooke.ca" class="todo">ton.courriel@usherbrooke.ca</a></p>
+</footer>
+
+</body>
+</html>
