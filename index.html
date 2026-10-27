@@ -1,256 +1,381 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Portfolio professionnel – Philippe Bouchard</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@500;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Philippe Bouchard — Portfolio</title>
+<meta name="description" content="Portfolio de Philippe Bouchard, bachelier en ingénierie du bâtiment.">
 <style>
-:root{--bg:#F5F7FA;--ink:#1B2A41;--blue:#2F5D8A;--line:#D5DCE6;--card:#fff;--hl:#FFF3C4;--hlb:#E0A100}
-@media (prefers-color-scheme:dark){:root{--bg:#121A26;--ink:#E8EDF3;--blue:#8FB5DE;--line:#2B394D;--card:#1A2433;--hl:#3A3214;--hlb:#E0A100}}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "IBM Plex Sans",system-ui,sans-serif}
-h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;line-height:1.2;margin:0 0 .5em}
-h1{font-size:clamp(2.2rem,6vw,3.6rem)}
-h2{font-size:clamp(1.7rem,4vw,2.3rem)}
-h3{font-size:1.25rem}
-a{color:var(--blue)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--hlb);outline-offset:2px}
-nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;padding:.8rem 1.25rem;align-items:center}
-nav strong{font-family:"Source Serif 4",serif;margin-right:auto}
-nav a{text-decoration:none;color:var(--ink);font-weight:500}
-nav a:hover{color:var(--blue);text-decoration:underline}
-main{max-width:1000px;margin:0 auto;padding:0 1.25rem}
-section{padding:4rem 0 2rem;border-bottom:1px solid var(--line)}
-.hero{display:grid;grid-template-columns:1fr 260px;gap:2.5rem;align-items:center;padding-top:3rem}
-.hero p.lead{font-size:1.2rem;max-width:60ch}
-.photo{aspect-ratio:4/5;width:100%;object-fit:cover;border-radius:6px;background:var(--line);display:grid;place-items:center;text-align:center;color:var(--ink);font-size:.9rem;padding:1rem}
-.three{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.two{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
-@media(max-width:760px){.hero,.three,.two{grid-template-columns:1fr}.photo{max-width:260px}}
-.box{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1.25rem}
-.box h3{margin-bottom:.4rem}
-.box.core{border:2px solid var(--blue)}
-.box ul{margin:.3rem 0 0;padding-left:1.2rem}
-.sub{color:var(--blue);font-size:.95rem;margin:0 0 .6rem}
-.todo{background:var(--hl);border-bottom:2px dashed var(--hlb);padding:0 .2em}
-.note{font-size:.9rem;opacity:.8}
-.comp{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:6px;padding:1.5rem;margin:1.5rem 0}
-.comp h4{margin:1.1rem 0 .2rem;font-size:1rem;color:var(--blue)}
-.comp p{margin:0 0 .5rem}
-.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin-top:1rem}
-.gallery figure{margin:0}
-.gallery .photo{aspect-ratio:4/3}
-figcaption{font-size:.9rem;margin-top:.3rem}
-.table-wrap{overflow-x:auto}
-table{border-collapse:collapse;width:100%;min-width:560px;background:var(--card)}
-th,td{border:1px solid var(--line);padding:.7rem;text-align:left;vertical-align:top}
-th{background:var(--bg)}
-footer{max-width:1000px;margin:0 auto;padding:2rem 1.25rem 3rem;font-size:.9rem}
+  :root {
+    --vert: #38761D;
+    --vert-pale: #eef5ea;
+    --texte: #222;
+    --gris: #666;
+    --ligne: #e3e3e3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Times New Roman", Times, Georgia, serif;
+    color: var(--texte);
+    background: #fff;
+    line-height: 1.7;
+    font-size: 18px;
+  }
+  a { color: var(--vert); }
+  img { max-width: 100%; display: block; }
+
+  /* Navigation */
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(255,255,255,0.96);
+    border-bottom: 1px solid var(--ligne);
+  }
+  nav ul {
+    list-style: none; display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 6px 32px; padding: 14px 16px; max-width: 1000px; margin: 0 auto;
+  }
+  nav a {
+    text-decoration: none; color: var(--texte); font-size: 0.95rem;
+    letter-spacing: 0.04em; padding-bottom: 2px; border-bottom: 2px solid transparent;
+    transition: color .2s, border-color .2s;
+  }
+  nav a:hover { color: var(--vert); border-color: var(--vert); }
+
+  .conteneur { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+  /* En-tête */
+  header { padding: 72px 0 56px; border-bottom: 1px solid var(--ligne); }
+  .entete {
+    display: grid; grid-template-columns: 1fr 260px; gap: 48px; align-items: center;
+  }
+  h1 { font-size: 3rem; font-weight: normal; letter-spacing: 0.01em; line-height: 1.1; }
+  .titre {
+    color: var(--vert); font-style: italic; font-size: 1.25rem; margin: 10px 0 24px;
+  }
+  .intro { color: #333; }
+  .liens { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .bouton {
+    display: inline-block; padding: 9px 22px; border: 1px solid var(--vert);
+    color: var(--vert); text-decoration: none; font-size: 0.95rem;
+    transition: background .2s, color .2s;
+  }
+  .bouton:hover, .bouton.plein { background: var(--vert); color: #fff; }
+  .bouton.plein:hover { background: #2c5e17; }
+
+  .cadre-photo {
+    position: relative; aspect-ratio: 4 / 5; background: var(--vert-pale);
+    border: 1px solid var(--ligne); overflow: hidden;
+  }
+  .cadre-photo.rond { border-radius: 50%; aspect-ratio: 1 / 1; border: 3px solid var(--vert); }
+  .cadre-photo img { width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1; }
+  .cadre-photo span {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    color: var(--vert); font-style: italic; font-size: 0.9rem; text-align: center; padding: 10px;
+  }
+
+  /* Sections */
+  section { padding: 72px 0; border-bottom: 1px solid var(--ligne); }
+  section:last-of-type { border-bottom: none; }
+  h2 {
+    font-size: 2rem; font-weight: normal; margin-bottom: 36px;
+    display: flex; align-items: baseline; gap: 14px;
+  }
+  h2 .num { color: var(--vert); font-size: 1.1rem; font-style: italic; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--vert); opacity: .35; }
+  h3 { font-size: 1.35rem; font-weight: normal; color: var(--vert); margin: 40px 0 14px; }
+  h3:first-of-type { margin-top: 0; }
+  p + p { margin-top: 14px; }
+
+  .galerie { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 28px 0 18px; }
+  .galerie .cadre-photo { aspect-ratio: 1 / 1; }
+
+  .experience { border-left: 2px solid var(--vert); padding: 4px 0 4px 22px; margin: 26px 0; }
+  .experience h4 { font-size: 1.1rem; font-weight: bold; margin-bottom: 2px; }
+  .experience .meta { color: var(--gris); font-style: italic; font-size: 0.95rem; margin-bottom: 10px; }
+
+  ul.puces { list-style: none; margin-top: 8px; }
+  ul.puces li { position: relative; padding-left: 22px; margin: 6px 0; }
+  ul.puces li::before {
+    content: ""; position: absolute; left: 4px; top: 0.7em;
+    width: 7px; height: 7px; background: var(--vert);
+  }
+
+  /* Cartes de compétences */
+  .cartes { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .carte {
+    border: 1px solid var(--ligne); border-top: 3px solid var(--vert);
+    padding: 28px 28px 24px; background: #fff;
+  }
+  .carte h3 { margin: 0 0 18px; font-size: 1.3rem; }
+  .carte h5 {
+    font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--vert); margin: 18px 0 4px; font-weight: bold;
+  }
+  .carte h5:first-of-type { margin-top: 0; }
+  .a-completer { background: #fff7d6; padding: 2px 6px; font-style: italic; }
+
+  /* Plan de développement */
+  .plan { display: grid; gap: 22px; margin-top: 30px; }
+  .plan-item { display: grid; grid-template-columns: 54px 1fr; gap: 18px; }
+  .plan-item .chiffre {
+    width: 54px; height: 54px; border: 1px solid var(--vert); color: var(--vert);
+    display: flex; align-items: center; justify-content: center; font-size: 1.4rem;
+  }
+  .plan-item h4 { font-size: 1.15rem; margin-bottom: 4px; }
+
+  footer {
+    text-align: center; padding: 36px 16px; color: var(--gris); font-size: 0.9rem;
+    border-top: 3px solid var(--vert);
+  }
+
+  @media (max-width: 760px) {
+    body { font-size: 17px; }
+    h1 { font-size: 2.3rem; }
+    .entete { grid-template-columns: 1fr; gap: 32px; }
+    .entete .cadre-photo { max-width: 220px; margin: 0 auto; order: -1; }
+    .cartes { grid-template-columns: 1fr; }
+    .galerie { grid-template-columns: 1fr 1fr; }
+    nav ul { gap: 6px 18px; }
+    section { padding: 52px 0; }
+  }
 </style>
 </head>
 <body>
 
-<!--
-  MODE D'EMPLOI
-  1. Tout ce qui est surligné en jaune (class="todo") est à remplacer par ton contenu.
-  2. Quand tu as remplacé un texte, supprime class="todo" de la balise pour retirer le surlignage.
-  3. Tes images vont dans le dossier "images". Remplace les <div class="photo"> par :
-     <img class="photo" src="images/nom-du-fichier.jpg" alt="Description de l'image">
--->
-
-<nav aria-label="Navigation principale">
-  <strong>Philippe Bouchard</strong>
-  <a href="#identite">Identité</a>
-  <a href="#techniques">Compétences techniques</a>
-  <a href="#transversales">Compétences transversales</a>
-  <a href="#plan">Plan de développement</a>
+<nav>
+  <ul>
+    <li><a href="#identite">Identité</a></li>
+    <li><a href="#techniques">Compétences techniques</a></li>
+    <li><a href="#transversales">Compétences transversales</a></li>
+    <li><a href="#developpement">Plan de développement</a></li>
+  </ul>
 </nav>
 
-<main>
-
-<!-- ============ IDENTITÉ PROFESSIONNELLE ============ -->
-<section id="identite" class="hero-section">
-  <div class="hero">
+<header>
+  <div class="conteneur entete">
     <div>
       <h1>Philippe Bouchard</h1>
-      <p class="sub">Étudiant en génie du bâtiment – Université de Sherbrooke</p>
-      <p class="lead">J'aime comprendre comment fonctionnent les systèmes et trouver comment les rendre plus efficaces. Ce qui m'attire dans le génie, c'est autant l'analyse technique que le contact avec les gens : écouter un client, comprendre son besoin et le traduire en solution concrète. Je me dirige vers la gestion de l'ingénierie, où je pourrai coordonner des équipes et des projets tout en gardant un pied dans la technique.</p>
+      <p class="titre">Bachelier en ingénierie du bâtiment</p>
+      <p class="intro">
+        J'aime comprendre comment fonctionnent les systèmes et trouver comment les rendre plus efficaces.
+        Ce qui m'attire dans le génie, c'est autant l'analyse technique que le contact avec les gens&nbsp;:
+        écouter un client, comprendre son besoin et le traduire en solution concrète. Je me dirige vers un
+        poste de conception où j'aurai à optimiser des solutions, à travailler en équipe et à utiliser mes
+        connaissances multidisciplinaires.
+      </p>
+      <div class="liens">
+        <!-- Remplace les liens ci-dessous par les tiens -->
+        <a class="bouton plein" href="CV_Philippe_Bouchard.pdf" download>Télécharger mon CV (PDF)</a>
+        <a class="bouton" href="https://www.linkedin.com/in/VOTRE-PROFIL" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="bouton" href="mailto:votre.courriel@exemple.com">Courriel</a>
+      </div>
     </div>
-    <div class="photo todo"><br>(images/portrait.jpg)</div>
-  </div>
-
-  <h2 style="margin-top:3rem">Mon identité professionnelle actuelle</h2>
-  <p class="note"></p>
-
-  <div class="three">
-    <div class="box">
-      <h3>Moi comme personne</h3>
-      <p class="sub">Valeurs, forces, motivations, intérêts, croyances, expériences de vie</p>
-      <p>Je suis curieux et j'aime optimiser : quand quelque chose peut être fait plus simplement, je cherche comment. Je suis autodidacte, ce qui m'a amené à maîtriser Excel avancé, Python, AutoCAD et Revit selon les besoins des projets. Ma gestion du temps et ma créativité m'ont servi autant dans mes études que dans mes implications : coordonnateur aux affaires externes de l'association étudiante du cégep, guitariste pendant dix ans et technicien de son lors de spectacles.</p>
-    </div>
-    <div class="box">
-      <h3>La profession d'ingénieur</h3>
-      <p class="sub">Rôle dans la société, responsabilités, déontologie, compétences attendues</p>
-      <p>Pour moi, l'ingénieur conçoit et fait fonctionner des ouvrages que la société utilise tous les jours, comme des écoles, des routes et des bâtiments. Il est responsable de leur sécurité et de leur qualité, et il doit respecter le Code de déontologie. Il doit aussi savoir communiquer avec des interlocuteurs très différents : clients, entrepreneurs, techniciens et autres ingénieurs.</p>
-    </div>
-    <div class="box">
-      <h3>Mes expériences</h3>
-      <p class="sub">Cours, projets, stages, implication étudiante, mentors, échecs et succès</p>
-      <ul>
-        <li>Stage en mécanique du bâtiment, Centre de service scolaire de la Capitale (automne 2025)</li>
-        <li>Assistant chargé de projet, Gobeil Dion &amp; Associés (hiver 2025)</li>
-        <li>Assistant chargé de projet, Acier Orford (été 2024)</li>
-        <li>Technicien en contrôle des matériaux, Services Exp (automne 2023)</li>
-        <li>Canoë de béton : équipe gagnante en 2023, co-capitaine en 2024</li>
-        <li>Compétition québécoise d'ingénierie, génie-conseil (2025)</li>
-      </ul>
+    <div class="cadre-photo rond">
+      <span>Ta photo</span>
+      <img src="images/photo-profil.jpg" alt="Photo de Philippe Bouchard" onerror="this.remove()">
     </div>
   </div>
-  
+</header>
 
-  <div class="box core" style="margin-top:1rem">
-    <h3>Mon identité professionnelle en quelques mots</h3>
-    <ul>
-      <li>Analytique : je cherche à comprendre un système avant d'agir</li>
-      <li>Optimisateur : je repère ce qui peut être amélioré</li>
-      <li>Orienté client et équipe : je fais le lien entre les gens et la technique</li>
+<main class="conteneur">
+
+  <!-- 1. IDENTITÉ -->
+  <section id="identite">
+    <h2><span class="num">01</span> Mon identité professionnelle</h2>
+
+    <h3>Moi comme personne</h3>
+    <p>
+      Aussi longtemps que je me souvienne, l'une des plus grandes forces qui m'animent est le désir et le
+      besoin de comprendre tout ce qui m'entoure. C'est pour cette raison que je m'intéresse à la science
+      depuis mon plus jeune âge. Le génie du bâtiment était donc un programme fait pour moi, puisqu'il me
+      permet de comprendre toutes les subtilités des infrastructures qui font partie intégrante de notre vie.
+    </p>
+    <p>
+      Pour moi, après la compréhension vient l'optimisation. J'adore éliminer l'inutile, automatiser et
+      simplifier les tâches que je dois répéter. Je ne crains pas l'inconnu et j'aime étendre mes capacités,
+      autant au travail que dans mes loisirs comme le travail du cuir ou la mécanique de vélo, où je me lance
+      constamment dans des projets remplis de premières avec l'intention d'apprendre en chemin. J'ai aussi
+      longtemps exercé ma créativité et ma rigueur en composant de la musique et en pratiquant la guitare.
+    </p>
+    <p>
+      Je suis friand de nouvelles expériences et j'en refuse rarement, ce qui m'a amené à participer à
+      plusieurs comités scolaires, à l'épreuve de génie-conseil de la CQI et au canoë de béton, ainsi qu'à
+      faire ma septième session en Belgique.
+    </p>
+
+    <div class="galerie">
+      <div class="cadre-photo"><span>Photo 1</span><img src="images/photo1.jpg" alt="" onerror="this.remove()"></div>
+      <div class="cadre-photo"><span>Photo 2</span><img src="images/photo2.jpg" alt="" onerror="this.remove()"></div>
+      <div class="cadre-photo"><span>Photo 3</span><img src="images/photo3.jpg" alt="" onerror="this.remove()"></div>
+    </div>
+    <div class="liens">
+      <a class="bouton" href="https://LIEN-VERS-TON-BLOGUE" target="_blank" rel="noopener">Mon blogue de voyage</a>
+      <a class="bouton" href="https://LIEN-VERS-TON-VIDEOCLIP" target="_blank" rel="noopener">Mon vidéoclip</a>
+    </div>
+
+    <h3>Mes expériences</h3>
+
+    <div class="experience">
+      <h4>Assistant chargé de projet — Gobeil Dion &amp; Associés</h4>
+      <div class="meta">Hiver 2025</div>
+      <h4>Technicien en contrôle des matériaux — Services EXP</h4>
+      <div class="meta">Automne 2023</div>
+      <p>
+        J'ai regroupé ces deux stages, car j'en ai tiré des apprentissages similaires. C'étaient deux stages
+        très concrets qui se déroulaient presque entièrement en chantier. J'ai beaucoup appris sur la réalité
+        des chantiers, les organigrammes, la théorie versus la pratique et les échéanciers.
+      </p>
+      <p>
+        Par-dessus tout, ces stages m'ont sorti de ma zone de confort, car ils m'ont fait travailler ce que je
+        considère comme l'une de mes plus grandes faiblesses&nbsp;: la confrontation. Confronter un ingénieur sur
+        des sujets techniques ne me pose aucun problème, mais lorsqu'il est question d'opinions et de sentiments
+        avec des pairs souvent peu réceptifs, je suis beaucoup moins à l'aise. Mon superviseur chez Gobeil Dion
+        m'a confié qu'il avait lui aussi plus de difficulté au début de sa carrière; il y excelle aujourd'hui.
+        C'est donc quelque chose que je souhaite améliorer dans un emploi de cette nature.
+      </p>
+    </div>
+
+    <div class="experience">
+      <h4>Assistant chargé de projet — Acier Orford</h4>
+      <div class="meta">Été 2024</div>
+      <p>
+        Ce stage a été mon préféré. J'ai eu la chance de travailler avec les dessinateurs, les autres chargés
+        de projet et les contremaîtres en chantier. J'ai commandé et vérifié plusieurs plans, coordonné la
+        production et la livraison de l'armature sur le chantier, tout en développant des outils Excel pour les
+        autres employés. Travailler avec plusieurs acteurs et combiner un peu de gestion avec des compétences
+        techniques est une dynamique que j'ai beaucoup aimée.
+      </p>
+      <p>
+        Ce que j'ai moins aimé, c'est le manque de projets en cours, ce qui faisait en sorte que j'avais
+        rarement assez de tâches pour remplir mes journées.
+      </p>
+    </div>
+
+    <h3>Objectifs de carrière à court terme</h3>
+    <ul class="puces">
+      <li>Obtenir un poste de CPI où je pourrai approfondir davantage mes connaissances techniques.</li>
+      <li>Évoluer dans le processus de CPI pour obtenir mon titre d'ingénieur (ing.).</li>
     </ul>
-  </div>
+  </section>
 
-  <h2 style="margin-top:3rem">Objectifs de carrière à court terme (1 à 2 ans)</h2>
-  <div class="two">
-    <div class="box"><h3>Objectif 1</h3><p > Occuper un poste d'ingénieur junior en mécanique du bâtiment ou en gestion de projet dans un bureau d'ingénieurs-conseils, avec des contacts directs avec les clients.</p></div>
-    <div class="box"><h3>Objectif 2</h3><p > Évoluer dans le processus de candidat à la proffession d'ingénierie pour obterir le titre de ing.</p></div>
-  </div>
+  <!-- 2. COMPÉTENCES TECHNIQUES -->
+  <section id="techniques">
+    <h2><span class="num">02</span> Compétences techniques</h2>
+    <div class="cartes">
+      <article class="carte">
+        <h3>Sensibilisation à la sécurité</h3>
+        <h5>Mise en contexte</h5>
+        <p>À l'hiver 2025, j'étais stagiaire assistant chargé de projet chez Gobeil Dion &amp; Associés. La santé
+          et la sécurité des travailleurs étaient abordées à chaque réunion de chantier.</p>
+        <h5>Actions</h5>
+        <ul class="puces">
+          <li>Je participais aux réunions de chantier et j'écoutais les enjeux de sécurité de chaque phase des travaux, par exemple le travail en hauteur.</li>
+          <li>J'animais des réunions de coordination et je faisais le suivi de l'avancement du chantier en tenant compte des risques liés à l'organisation des travaux.</li>
+          <li>Je communiquais avec les sous-traitants pour leur transmettre les demandes des différents coordonnateurs SST.</li>
+        </ul>
+        <h5>Résultats</h5>
+        <p>Ce stage m'a sensibilisé à l'importance de prévoir, dès la conception, les enjeux d'installation liés à
+          la sécurité et d'ajuster les échéanciers pour éviter les manœuvres in extremis.</p>
+      </article>
 
-  <h2 style="margin-top:3rem">Preuves et artéfacts</h2>
-  <p class="note"></p>
-  <div class="gallery">
-    <figure><div class="photo todo">canoë de béton</div><figcaption>Canoë de béton de l'Université de Sherbrooke, équipe gagnante 2023 et co-capitaine 2024.</figcaption></figure>
-    <figure><div class="photo todo">CQI 2025</div><figcaption>Compétition québécoise d'ingénierie, catégorie génie-conseil, 2025.</figcaption></figure>
-    <figure><div class="photo todo">Chantier</div><figcaption>Stage en mécanique du bâtiment, automne 2025.</figcaption></figure>
-  </div>
-</section>
-
-
-<!-- ============ COMPÉTENCES TECHNIQUES ============ -->
-<section id="techniques">
-  <h2>Compétences techniques</h2>
- <!--<p>Deux compétences du référentiel de l'OIQ, rédigées selon le format mise en contexte, actions et résultats.</p>-->
-
-  <article class="comp">
-    <h3>1.6 – Sensibilisation à la sécurité</h3>
-    <h4>Mise en contexte</h4>
-    <p>À l'hiver 2025, j'étais stagiaire assistant chargé de projet chez Gobeil Dion &amp; Associés. La santé et la sécurité des travailleurs était un sujet abordé à chaque réunion de chantier.</p>
-    <h4>Actions</h4>
-    <ul>
-      <li>Je participais aux réunions de chantier et j'écoutais les enjeux de sécurité de chaque phase des travaux, par exemple le travail en hauteur.</li>
-      <li>J'animais des réunions de coordination et je recensais l'avancement du chantier en tenant compte des risques liés à l'organisation des travaux.</li>
-      <li>Je communiquais avec les sous-traitants pour leur faire par des demandes des différents coordonateurs SST.</li>
-    </ul>
-    <h4>Résultats</h4>
-    <p>Ce stage m'a sensibilisé sur l'importance de prévoir les enjeux d'installations liés à la sécurité lors du design et d'ajuster les échéanciers pour éviter les manoeuvres in extremis.</p>
-    <h4>Preuves</h4>
-    <ul><li><a href="#" class="todo">XXXXXXXXXXXXXXXXXXXXXX</a></li></ul>
-  </article>
-
-  <article class="comp">
-    <h3>1.8 – Examen par les pairs et contrôle qualité</h3>
-    <h4>Mise en contexte</h4>
-    <p>À l'été 2024, j'étais assistant chargé de projet chez Acier Orford Inc. Je gérais la création des dessins d'atelier de l'acier d'armature, qui devaient être exacts avant la fabrication et la livraison.</p>
-    <h4>Actions</h4>
-    <ul>
-      <li>Je vérifiais les dessins des dessinateurs en les comparant aux plans de structure des ingénieurs.</li>
-      <li>Je repérais les erreurs, fréquentes dans les plans, notamment : mauvaise quantité d'acier sur les plan des structure ou mauvaise vérification faites par l'ingénieur(e).</li>
-      <li>Je les signalais à l'acteur en faute pour qu'elles soient corrigées avant la fabrication.</li>
-    </ul>
-    <h4>Résultats</h4>
-    <p >Erreurs corrigées avant la production, coûts ou délais évités, dessins d'atelier soumis plus efficacement.</p>
-    <h4>Preuves</h4>
-    <ul><li><a href="#" class="todo">XXXXXXXXXXXXXXXXXXX</a></li></ul>
-  </article>
-</section>
-
-
-
-<!-- ============ COMPÉTENCES TRANSVERSALES ============ -->
-<section id="transversales">
-  <h2>Compétences transversales</h2>
- <!-- <p>Deux compétences du référentiel de l'OIQ, même format que les compétences techniques.</p>-->
-
-  <article class="comp">
-    <h3>2.2 – Communication écrite</h3>
-    <h4>Mise en contexte</h4>
-    <p>À l'automne 2025, j'ai fait un stage en mécanique du bâtiment au Centre de service scolaire de la Capitale. J'y rédigeais et je suivais des demandes de soumission en temps et matériel.</p>
-    <h4>Actions</h4>
-    <ul>
-      <li>J'écrivais des courriels clairs et concis, afin d'éviter toute ambiguïté sur ce que je demandais, par exemple : dimension de distribution mécanique, horaire spéciale lié au activité d'enseignement, etc.</li>
-      <li>Je faisais le suivi des demandes et je relançais les entrepreneurs au besoin.</li>
-    </ul>
-    <h4>Résultats</h4>
-    <p >L'effet de cette clarté : moins d'allers-retours, soumissions reçues plus rapidement ou conformes à la demande. </p>
-    <h4>Preuves</h4>
-    <ul><li><a href="#" class="todo">XXXXXXXXXXXXXXXXXXX</a></li></ul>
-  </article>
-
-  <article class="comp">
-    <h3>3.3 – Attentes versus ressources</h3>
-    <h4>Mise en contexte</h4>
-    <p>Durant mon stage au Centre de service scolaire de la Capitale, un organisme de la fonction publique, je réalisais de petits projets avec des ressources très limitées.</p>
-    <h4>Actions</h4>
-    <ul>
-      <li>J'ai conçu des rénovation de ventilation en tenant compte du budget disponible.</li>
-      <li>Je ciblais les interventions prioritaires grâce à l'inspection des réseaux de plomberie et de ventilation.</li>
-      <li >Un compromis précis fait entre les besoins et les ressources (ex. : solution plus économique, travaux répartis dans le temps).</li>
-    </ul>
-    <h4>Résultats</h4>
-    <p class="todo">XXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-    <h4>Preuves</h4>
-    <ul><li><a href="#" class="todo">XXXXXXXXXXXXXXXXXXX</a></li></ul>
-  </article>
-</section>
-
-
-<!-- ============ PLAN DE DÉVELOPPEMENT ============ 
-<section id="plan" style="border-bottom:0">
-  <h2>Plan de développement professionnel (2 à 4 ans)</h2>
-  <p>Compétence 6.3 de l'OIQ. Ce plan doit être cohérent avec les besoins de formation de ton annexe autocritique.</p>
-
-  <div class="two">
-    <div class="box">
-      <h3>Indicateur 1 : combler mes lacunes</h3>
-      <p class="sub">Continuer ma formation là où des lacunes sont reconnues</p>
-      <p class="todo">Quelles lacunes as-tu identifiées et comment comptes-tu les combler ?</p>
+      <article class="carte">
+        <h3>Examen par les pairs et contrôle qualité</h3>
+        <h5>Mise en contexte</h5>
+        <p>À l'été 2024, j'étais assistant chargé de projet chez Acier Orford inc. Je gérais la création des
+          dessins d'atelier de l'acier d'armature, qui devaient être exacts avant la fabrication et la livraison.</p>
+        <h5>Actions</h5>
+        <ul class="puces">
+          <li>Je vérifiais les dessins des dessinateurs en les comparant aux plans de structure des ingénieurs.</li>
+          <li>Je repérais les erreurs, fréquentes dans les plans&nbsp;: mauvaise quantité d'acier sur les plans de structure ou vérification erronée de l'ingénieur(e).</li>
+          <li>Je les signalais à la personne responsable pour qu'elles soient corrigées avant la fabrication.</li>
+        </ul>
+        <h5>Résultats</h5>
+        <p>Erreurs corrigées avant la production, coûts et délais évités, et dessins d'atelier soumis plus efficacement.</p>
+      </article>
     </div>
-    <div class="box">
-      <h3>Indicateur 2 : me tenir à jour</h3>
-      <p class="sub">Activités planifiées d'autoformation et de développement professionnel</p>
-      <p class="todo">Quelles activités prévois-tu pour rester à jour dans ton champ de pratique ?</p>
-    </div>
-  </div>
+  </section>
 
-  <h3 style="margin-top:2rem">Échéancier</h3>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Période</th><th>Besoin de formation</th><th>Activité ou moyen</th><th>Indicateur visé</th></tr></thead>
-      <tbody>
-        <tr><td class="todo">Année 1</td><td class="todo">…</td><td class="todo">…</td><td class="todo">1 ou 2</td></tr>
-        <tr><td class="todo">Année 2</td><td class="todo">…</td><td class="todo">…</td><td class="todo">1 ou 2</td></tr>
-        <tr><td class="todo">Année 3</td><td class="todo">…</td><td class="todo">…</td><td class="todo">1 ou 2</td></tr>
-        <tr><td class="todo">Année 4</td><td class="todo">…</td><td class="todo">…</td><td class="todo">1 ou 2</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+  <!-- 3. COMPÉTENCES TRANSVERSALES -->
+  <section id="transversales">
+    <h2><span class="num">03</span> Compétences transversales</h2>
+    <div class="cartes">
+      <article class="carte">
+        <h3>Communication écrite</h3>
+        <h5>Mise en contexte</h5>
+        <p>À l'automne 2025, j'ai fait un stage en mécanique du bâtiment au Centre de services scolaire de la
+          Capitale. J'y rédigeais et suivais des demandes de soumission en temps et matériel.</p>
+        <h5>Actions</h5>
+        <ul class="puces">
+          <li>J'écrivais des courriels clairs et concis afin d'éviter toute ambiguïté sur ce que je demandais, par exemple&nbsp;: dimensions de la distribution mécanique, horaires spéciaux liés aux activités d'enseignement, etc.</li>
+          <li>Je faisais le suivi des demandes et je relançais les entrepreneurs au besoin.</li>
+        </ul>
+        <h5>Résultats</h5>
+        <p>Moins d'allers-retours et des soumissions reçues plus rapidement et conformes à la demande.</p>
+      </article>
+
+      <article class="carte">
+        <h3>Attentes versus ressources</h3>
+        <h5>Mise en contexte</h5>
+        <p>Durant mon stage au Centre de services scolaire de la Capitale, un organisme public, je réalisais de
+          petits projets avec des ressources très limitées.</p>
+        <h5>Actions</h5>
+        <ul class="puces">
+          <li>J'ai conçu des rénovations de ventilation en tenant compte du budget disponible.</li>
+          <li>Je ciblais les interventions prioritaires grâce à l'inspection des réseaux de plomberie et de ventilation.</li>
+          <li>Je faisais des compromis entre les besoins et les ressources (ex.&nbsp;: solution plus économique, travaux répartis dans le temps).</li>
+        </ul>
+        <h5>Résultats</h5>
+        <p><span class="a-completer">À compléter</span></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 4. PLAN DE DÉVELOPPEMENT -->
+  <section id="developpement">
+    <h2><span class="num">04</span> Plan de développement</h2>
+    <p>
+      Pour évoluer dans sa carrière, il est important de ne jamais cesser d'apprendre. Il est primordial
+      d'apprendre dans le contexte de son travail, mais il faut aussi se tourner vers des sources externes pour
+      élargir ses horizons et suivre les nouveaux développements. Voici les formations que je prévois suivre
+      dans les prochaines années&nbsp;:
+    </p>
+    <div class="plan">
+      <div class="plan-item">
+        <div class="chiffre">1</div>
+        <div>
+          <h4>Maîtrise en gestion de l'ingénierie</h4>
+          <p>Je prévois suivre un ou deux cours de la M.G.I. offerte à l'Université de Sherbrooke par session,
+            avec l'objectif d'accélérer le rythme lorsque j'aurai appris la majorité des notions nécessaires à
+            l'exécution des tâches de mon travail. Cela me permettra de garder des contacts de grande valeur avec
+            les professeurs et les autres étudiants, et évidemment d'obtenir une maîtrise.</p>
+        </div>
+      </div>
+      <div class="plan-item">
+        <div class="chiffre">2</div>
+        <div>
+          <h4>Formations spécifiques à l'emploi</h4>
+          <p>Ces formations visent surtout à me tenir au courant des nouveautés dans mon domaine. Une ou deux fois
+            par année, je prévois assister à des congrès présentant de nouvelles techniques de construction ou de
+            nouveaux matériaux, ou à des séminaires sur de nouvelles méthodes de travail comme le BIM.</p>
+        </div>
+      </div>
+      <div class="plan-item">
+        <div class="chiffre">3</div>
+        <div>
+          <h4>Formations pour remédier à des lacunes</h4>
+          <p>Lorsque je réaliserai qu'une lacune me limite dans mon travail, ou qu'un collègue ou un supérieur
+            me la signalera, j'élaborerai un plan d'action et de formation pour y remédier.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </main>
 
 <footer>
-  <p>Portfolio GCI607 – Philippe Bouchard – Automne 2026 – <a href="mailto:ton.courriel@usherbrooke.ca" class="todo">ton.courriel@usherbrooke.ca</a></p>
+  © 2026 Philippe Bouchard · Ingénierie du bâtiment
 </footer>
--->
+
 </body>
 </html>
